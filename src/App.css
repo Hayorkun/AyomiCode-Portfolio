@@ -1,28 +1,7 @@
 @import "tailwindcss";
 
 
-
-* {
-  box-sizing: border-box;
- 
-}
 /* NAVBAR CSS */
-
-.hamburger-btn {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  color: #a7aab0;
-}
-
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-}
 
 .sidebar {
   position: fixed;
@@ -53,16 +32,7 @@
 }
 
 @media (max-width: 600px) {
-  nav {
-    height: 60px;
-    padding: 0 15px;
-  }
-  .logo-link h1 {
-    font-size: 27px;
-  }
-  .nav-links {
-    display: none;
-  }
+  
   .hamburger-btn {
     display: block;
   }

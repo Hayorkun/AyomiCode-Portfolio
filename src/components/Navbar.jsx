@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="border-b-1 border-orange-300/50 h-15 flex justify-between items-center p-5 md:p-10">
-        <div className=" ">
+        <div>
           <h1 className="text-2xl font-bold text-purple-500 ">
             <NavLink to="/" className="text-orange-400">
               AyomiCode
@@ -47,23 +47,30 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-          <NavLink className="border-1 border-orange-400 text-sm text-orange-400 px-2 py-1 rounded-lg hover:bg-orange-400 hover:text-white">
+
+          <NavLink
+            to="/contact"
+            className="border-1 border-orange-400 text-sm text-orange-400 px-2 py-1 rounded-lg hover:bg-orange-400 hover:text-white hover:translate-y-1 transition"
+          >
             Hire me
           </NavLink>
         </div>
 
-        <button className="hamburger-btn" onClick={() => setSidebarOpen(true)}>
+        <button
+          className="block md:hidden size-10 items-center"
+          onClick={() => setSidebarOpen(true)}
+        >
           <i className="fa-solid fa-bars"></i>
         </button>
         {sidebarOpen && (
-          <div className="overlay" onClick={() => setSidebarOpen(false)} />
+          <div className="fixed z-0" onClick={() => setSidebarOpen(false)} />
         )}
 
         <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
           <button className="close-btn" onClick={() => setSidebarOpen(false)}>
             <i className="fa-solid fa-x"></i>
           </button>
-          <div className="text-3xl text-white w-20 h-20 bg-purple-500/50 flex justify-center items-center border-4 border-purple-500/80 rounded-full  ">
+          <div className="text-3xl text-white w-20 h-20 bg-purple-500/50 flex justify-center items-center border-4 border-purple-500/80 rounded-full">
             <h2>AY</h2>
           </div>
           <div className="m-0">

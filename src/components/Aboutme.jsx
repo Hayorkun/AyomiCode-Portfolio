@@ -25,36 +25,36 @@ const AboutMe = () => {
             code, I'm exploring new design trends, contributing to open-source
             projects, or sketching UI concepts in Figma.
           </p>
-          <div className="flex gap-4">
+          <div className="flex justify-center md:justify-start gap-4">
             <NavLink
               to="/project"
-              className="border-1 px-6 py-3 rounded-md mt-5 text-xs bg-purple-400 border-none items-center hover:translate-y-0.5 hover:bg-white hover:text-black transform-gpu transition"
+              className="border-1 px-6 py-3 rounded-md mt-5 text-xs bg-orange-400 border-none items-center hover:-translate-y-0.5 hover:bg-white hover:text-black transform-gpu transition"
             >
               See my projects <i class="fa-solid fa-right-long"></i>
             </NavLink>
             <NavLink
               to="/contact"
-              className="border-1 px-6 py-3 rounded-md mt-5 text-xs border-white-100 hover:border-purple-500/70 hover:text-purple-500/70 hover:translate-y-0.5 transform-gpu transition"
+              className="border-1 px-6 py-3 rounded-md mt-5 text-xs border-white-100 hover:border-purple-500/70 hover:text-purple-500/70 hover:-translate-y-0.5 transform-gpu transition"
             >
               Get in touch
             </NavLink>
           </div>
         </div>
-        <div className="mt-6 w-full md:w-[37.5%]  w-full border-1 border-purple-300/30 bg-purple-400/10 px-8 py-4 flex justify-between rounded-xl">
+        <div className="mt-6 w-full md:w-[37.5%]  w-full border-1 border-orange-300/30 bg-orange-300/10 px-8 py-4 flex justify-between rounded-xl">
           <div className="w-full">
-            <div className="w-full flex justify-between mb-1 border-b-1 border-purple-500/50 pb-1.5">
+            <div className="w-full flex justify-between mb-1 border-b-1 border-orange-400/50 pb-1.5">
               <p className="text-xs">Location</p>
               <h4>Oyo, Nigeria</h4>
             </div>
-            <div className="w-full flex justify-between mb-1 border-b-1 border-purple-500/50 py-1">
+            <div className="w-full flex justify-between mb-1 border-b-1 border-orange-400/50 py-1">
               <p className="text-xs">Experience</p>
               <h4>1+ years</h4>
             </div>
-            <div className="w-full flex justify-between mb-1 border-b-1 border-purple-500/50 py-1">
+            <div className="w-full flex justify-between mb-1 border-b-1 border-orange-400/50 py-1">
               <p className="text-xs">Availability</p>
               <h4 className="text-green-500">Open to work</h4>
             </div>
-            <div className="w-full flex justify-between mb-1 border-b-1 border-purple-500/50 py-1">
+            <div className="w-full flex justify-between mb-1 border-b-1 border-orange-400/50 py-1">
               <p className="text-xs">Focus</p>
               <h4>React, Next.js, UI</h4>
             </div>
