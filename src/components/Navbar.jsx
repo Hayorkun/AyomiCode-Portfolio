@@ -1,0 +1,128 @@
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+
+const Navbar = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const navLinkStyles = ({ isActive }) => ({
+    color: isActive ? "oklch(75% 0.183 55.934)" : "oklch(70.7% 0.022 261.325)",
+    textDecoration: isActive ? "underline" : "none",
+  });
+
+  return (
+    <>
+      <nav className="border-b-1 border-orange-300/50 h-15 flex justify-between items-center p-5 md:p-10">
+        <div className=" ">
+          <h1 className="text-2xl font-bold text-purple-500 ">
+            <NavLink to="/" className="text-orange-400">
+              AyomiCode
+            </NavLink>
+          </h1>
+        </div>
+        <div className="hidden md:flex items-center gap-5">
+          <ul className="flex gap-5">
+            <li>
+              <NavLink style={navLinkStyles} to="/">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink style={navLinkStyles} to="/about">
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink style={navLinkStyles} to="/project">
+                Project
+              </NavLink>
+            </li>
+            <li>
+              <NavLink style={navLinkStyles} to="/skills">
+                Skills
+              </NavLink>
+            </li>
+            <li>
+              <NavLink style={navLinkStyles} to="/contact">
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+          <NavLink className="border-1 border-orange-400 text-sm text-orange-400 px-2 py-1 rounded-lg hover:bg-orange-400 hover:text-white">
+            Hire me
+          </NavLink>
+        </div>
+
+        <button className="hamburger-btn" onClick={() => setSidebarOpen(true)}>
+          <i className="fa-solid fa-bars"></i>
+        </button>
+        {sidebarOpen && (
+          <div className="overlay" onClick={() => setSidebarOpen(false)} />
+        )}
+
+        <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
+          <button className="close-btn" onClick={() => setSidebarOpen(false)}>
+            <i className="fa-solid fa-x"></i>
+          </button>
+          <div className="text-3xl text-white w-20 h-20 bg-purple-500/50 flex justify-center items-center border-4 border-purple-500/80 rounded-full  ">
+            <h2>AY</h2>
+          </div>
+          <div className="m-0">
+            <h2 className="text-xs text-white">Ayomide Yerokun</h2>
+            <span className="text-lg text-white">Frontend-Developer</span>
+          </div>
+
+          <ul>
+            <li>
+              <NavLink
+                style={navLinkStyles}
+                to="/"
+                onClick={() => setSidebarOpen(false)}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                style={navLinkStyles}
+                to="/about"
+                onClick={() => setSidebarOpen(false)}
+              >
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                style={navLinkStyles}
+                to="/project"
+                onClick={() => setSidebarOpen(false)}
+              >
+                Project
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                style={navLinkStyles}
+                to="/skills"
+                onClick={() => setSidebarOpen(false)}
+              >
+                Skills
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                style={navLinkStyles}
+                to="/contact"
+                onClick={() => setSidebarOpen(false)}
+              >
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+          <button className="hire-mBtn">Hire me</button>
+        </div>
+      </nav>
+    </>
+  );
+};
+
+export default Navbar;
