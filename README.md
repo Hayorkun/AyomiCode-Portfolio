@@ -19,4 +19,4 @@ A modern and responsive portfolio website built with React and Tailwind CSS to s
 * JavaScript (ES6+)
 * HTML5
 * CSS3
-* React Router (if used)
+* React Router 
