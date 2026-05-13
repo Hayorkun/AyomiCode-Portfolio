@@ -34,7 +34,7 @@ const AboutMe = () => {
             </NavLink>
             <NavLink
               to="/contact"
-              className="border-1 px-6 py-3 rounded-md mt-5 text-xs border-white-100 hover:border-purple-500/70 hover:text-purple-500/70 hover:-translate-y-0.5 transform-gpu transition"
+              className="border-1 px-6 py-3 rounded-md mt-5 text-xs border-white-100 hover:border-orange-500 hover:text-orange-500 hover:-translate-y-0.5 transform-gpu transition"
             >
               Get in touch
             </NavLink>

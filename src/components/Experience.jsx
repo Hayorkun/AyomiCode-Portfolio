@@ -31,12 +31,10 @@ const Experience = () => {
             </div>
             <div>
               <p>2025 - 2026</p>
-              <h2 className="font-semibold text-xl mb-2">Frontend Developer</h2>
+              <h2 className="font-semibold text-xl mb-2">Junior Frontend Developer</h2>
               <p className="text-xs mb-4">Freelance Self-project</p>
               <h5>
-                Building responsive web applications and landing pages for
-                clients across fintech and e-commerce. Shipping polished React
-                interfaces from Figma designs.
+                Worked on marketing sites and internal dashboards. Improved page performance by 40% and introduced component-driven architecture with React.
               </h5>
             </div>
           </div>
@@ -48,12 +46,10 @@ const Experience = () => {
             </div>
             <div>
               <p>2025 - 2026</p>
-              <h2 className="font-semibold text-xl mb-2">Frontend Developer</h2>
-              <p className="text-xs mb-4">Freelance Self-project</p>
+              <h2 className="font-semibold text-xl mb-2">Self-taught & Learning</h2>
+              <p className="text-xs mb-4">online</p>
               <h5>
-                Building responsive web applications and landing pages for
-                clients across fintech and e-commerce. Shipping polished React
-                interfaces from Figma designs.
+               Deep-dived into HTML, CSS, JavaScript, and React. Built personal projects and contributed to open-source to sharpen skills.
               </h5>
             </div>
           </div>
