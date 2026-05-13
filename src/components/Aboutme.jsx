@@ -5,7 +5,7 @@ const AboutMe = () => {
     <section className="p-4  md:flex-col">
       <div className=" md:items-center md:p-5  h-fit block md:flex md:gap-6">
         <div className="w-full md:w-[62.5%]">
-          <h3 className="text-orange-400 ">Who am i</h3>
+          <h3 className="text-orange-400 ">WHO I AM</h3>
 
           <h2 className="text-4xl font-bold mt-1 ">
             Building things for the web

@@ -17,13 +17,13 @@ const CTA = () => {
           <div className="mt-3 flex flex-col md:flex-row gap-3">
             <NavLink
               to="/contact"
-              className=" px-4 py-2 rounded-lg bg-white text-black text-sm text-center hover:bg-orange-600/60 hover:text-white"
+              className=" px-4 py-2 rounded-lg bg-white text-black text-sm text-center hover:bg-orange-600/60 hover:text-white transition"
             >
               Start a projects
             </NavLink>
             <NavLink
               to="/project"
-              className="border-1 px-4 py-2 text-sm text-center rounded-lg hover:text-white hover:bg-black hover:border-black"
+              className="border-1 px-4 py-2 text-sm text-center rounded-lg hover:text-white hover:bg-black hover:border-black transition"
             >
               View projects
             </NavLink>
