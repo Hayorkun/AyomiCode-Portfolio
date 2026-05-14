@@ -2,14 +2,14 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <section className="px-5 py-3 md:py-5 md:px-10 border-t-1 border-orange-300/50">
-      <div className="md:flex justify-around">
+    <section className="px-5 py-6 md:py-5 md:px-10 border-t-1 border-orange-300/50 mt-5">
+      <div className="md:flex justify-around ">
         <div className=" flex flex-col justify-center">
-          <div className=" self-center">
+          <div className="self-center ">
             <h2 className="flex justify-center text-4xl text-orange-400 font-syne font-bold mb-2">
               AyomiCode
             </h2>
-            <p className="text-center text-sm text-gray-400 w-xs md:w-md text-wrap mb-2">
+            <p className="text-center text-wrap text-sm text-gray-400 w-xs md:w-md mb-2">
               Frontend developer crafting fast, beautiful, and accessible web
               experiences with React and modern CSS.
             </p>
@@ -36,7 +36,7 @@ const Footer = () => {
             </span>
           </div>
         </div>
-        <div className="flex md:gap-10 justify-around item mt-3">
+        <div className="flex md:gap-10 justify-around mt-3">
           <div className="flex flex-col gap-1 ">
             <h2 className="mb-2 text-orange-300">Pages</h2>
             <NavLink>Home</NavLink>

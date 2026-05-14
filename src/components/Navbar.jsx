@@ -57,7 +57,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className="block md:hidden size-10 items-center"
+          className="block md:hidden size-10 items-center cursor-pointer"
           onClick={() => setSidebarOpen(true)}
         >
           <i className="fa-solid fa-bars"></i>

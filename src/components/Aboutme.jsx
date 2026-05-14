@@ -2,19 +2,19 @@ import { NavLink } from "react-router-dom";
 
 const AboutMe = () => {
   return (
-    <section className="p-4  md:flex-col">
-      <div className=" md:items-center md:p-5  h-fit block md:flex md:gap-6">
+    <section className="p-5 md:p-10  md:flex-col">
+      <div className=" md:items-center py-7  h-fit block md:flex md:gap-6">
         <div className="w-full md:w-[62.5%]">
           <h3 className="text-orange-400 ">WHO I AM</h3>
 
-          <h2 className="text-4xl font-bold mt-1 ">
+          <h2 className="text-4xl font-bold mt-3 ">
             Building things for the web
           </h2>
-          <p className="mt-1">
+          <p className="mt-3">
             A frontend developer who loves turning ideas into polished,
             interactive experiences.
           </p>
-          <p className="my-5">
+          <p className="my-4">
             I'm <span className="font-bold text-white">Ayomide Yerokun</span>, a
             frontend developer with 1+ year of experience building responsive,
             accessible, and high-performance web applications. I specialise in
@@ -40,7 +40,7 @@ const AboutMe = () => {
             </NavLink>
           </div>
         </div>
-        <div className="mt-6 w-full md:w-[37.5%]  w-full border-1 border-orange-300/30 bg-orange-300/10 px-8 py-4 flex justify-between rounded-xl">
+        <div className="mt-10 w-full md:w-[37.5%]  w-full border-1 border-orange-300/30 bg-orange-300/10 px-8 py-4 flex justify-between rounded-xl">
           <div className="w-full">
             <div className="w-full flex justify-between mb-1 border-b-1 border-orange-400/50 pb-1.5">
               <p className="text-xs">Location</p>
