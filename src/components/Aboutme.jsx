@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const AboutMe = () => {
   return (
     <section className="p-5 md:p-10  md:flex-col">
-      <div className=" md:items-center py-7  h-fit block md:flex md:gap-6">
+      <div className=" md:items-center py-7  block md:flex md:gap-6">
         <div className="w-full md:w-[62.5%]">
           <h3 className="text-orange-400 ">WHO I AM</h3>
 
