@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <section className="p-5 md:p-10">
-      <div className="py-7 md:py-10 w-full sm:w-full md:w-[62.5%]">
+      <div className="py-7 md:py-10 w-full md:w-[62.5%]">
         <p className="mb-3 text-orange-300 ">LET'S WORK TOGETHER</p>
         <h1 className="text-4xl md:text-5xl font-bold md:font-extrabold mb-5">
           Get in touch
