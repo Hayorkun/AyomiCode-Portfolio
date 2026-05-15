@@ -1,19 +1,33 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-const firstName = document.getElementById('firstName')  
-const lastName = document.getElementById('lastName')
-const email = document.getElementById('email')
-const subject = document.getElementById('subject')
-const message = document.getElementById('message')
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    console.log(formData);
 
-
-
-
-
+    if (!formData.firstName) {
+      alert("First name is required");
+      return;
+    }
+    alert("Form submitted");
+  };
 
   return (
     <section className="p-5 md:p-10">
@@ -31,71 +45,84 @@ const message = document.getElementById('message')
             {/* NAME FIELDS */}
             <div className="flex gap-4">
               <div className="flex-1">
-                <label htmlFor="firstName" className="block text-lg mb-2">
+                <label htmlFor="firstName" className="block mb-2">
                   First name
                   <input
-                  id="firstName"
-                  placeholder="John"
-                  type="text"
-                  className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 mt-3"
-                />
+                    id="firstName"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    placeholder="John"
+                    type="text"
+                    className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 mt-3 text-sm"
+                  />
+                  <span className="" id="firstnameerror"></span>
                 </label>
-                
               </div>
               <div className="flex-1">
-                <label htmlFor="lastname" className="block text-lg mb-2">
+                <label htmlFor="lastName" className="block mb-2">
                   Last name
-                   <input
-                  id="lastName"
-                  placeholder="Doe"
-                  type="text"
-                  className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 mt-3"
-                />
+                  <input
+                    id="lastName"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    placeholder="Doe"
+                    type="text"
+                    className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 mt-3 text-sm"
+                  />
                 </label>
               </div>
             </div>
             {/* EMAIL */}
             <div className="flex-1">
-              <label htmlFor="lastname" className="block text-lg mb-2">
+              <label htmlFor="email" className="block mb-2">
                 Email address
                 <input
-                id="email"
-                placeholder="John@example.com"
-                type="email"
-                className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5"
-              />
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="John@example.com"
+                  type="email"
+                  className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 text-sm"
+                />
               </label>
             </div>
             {/* SUBJECT */}
             <div className="flex-1">
-              <label htmlFor="lastname" className="block text-lg mb-2">
+              <label htmlFor="subject" className="block mb-2">
                 Subject
-                  <input
-                id="subject"
-                placeholder="Project enquiry"
-                type="text"
-                className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white p-5 rounded-xl"
-              />
+                <input
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  placeholder="Project enquiry"
+                  type="text"
+                  className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white p-5 rounded-xl text-sm"
+                />
               </label>
-            
             </div>
 
             {/* MESSAGE */}
             <div className="flex-1">
-              <label htmlFor="lastname" className="block text-lg mb-2">
+              <label htmlFor="message" className="block mb-2">
                 Message
                 <textarea
-                id="message"
-                placeholder="Tell me about your project."
-                type="text"
-                className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 h-30"
-              />
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Tell me about your project."
+                  className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 h-15 text-sm"
+                />
               </label>
-              
             </div>
             <button
-              className="flex items-center justify-center py-3 px-6 rounded-xl self-start bg-orange-400"
+              className="flex  text-sm items-center justify-center py-2 px-4 rounded-xl self-start bg-orange-400"
               type="submit"
+              onSubmit={handleSubmit}
             >
               Send message <i className="fa-solid fa-right-long"></i>
             </button>
@@ -138,7 +165,7 @@ const message = document.getElementById('message')
               />
             </span>
             <div>
-              <h3 className="text-lg font-semibold">Email</h3>
+              <h3 className="text-lg font-semibold">GitHub</h3>
               <p className="text-sm text-gray-300/70">
                 Ayomideyerokun54@gmail.com
               </p>
@@ -153,7 +180,7 @@ const message = document.getElementById('message')
               />
             </span>
             <div>
-              <h3 className="text-lg font-semibold">Email</h3>
+              <h3 className="text-lg font-semibold">Linkedin</h3>
               <p className="text-sm text-gray-300/70">
                 Ayomideyerokun54@gmail.com
               </p>
