@@ -15,18 +15,43 @@ const Contact = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+
+    setErrors({
+      ...errors,
+      [e.target.name]: e.value,
+    });
   };
+  const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(formData);
+    let newErrors = {};
 
-    if (!formData.firstName) {
-      alert("First name is required");
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = "First name is required";
+    } 
+    
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = "Last name is required"
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required"
+    }
+    if (!formData.subject.trim()) {
+      newErrors.subject = "Subject is required"
+    }
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required"
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) {
       return;
     }
-    alert("Form submitted");
+
+    console.log(formData);
   };
 
   return (
@@ -37,15 +62,15 @@ const Contact = () => {
           <h1 className="text-4xl md:text-5xl font-bold md:font-extrabold mb-5">
             Get in touch
           </h1>
-          <p className="mb-5">
+          <p className="mb-5 text-sm">
             Have a project in mind or a role to fill? I'd love to hear from you.
           </p>
 
-          <form className="flex flex-col gap-5">
+          <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
             {/* NAME FIELDS */}
             <div className="flex gap-4">
               <div className="flex-1">
-                <label htmlFor="firstName" className="block mb-2">
+                <label htmlFor="firstName" className="block text-gray-400 mb-2">
                   First name
                   <input
                     id="firstName"
@@ -56,11 +81,15 @@ const Contact = () => {
                     type="text"
                     className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 mt-3 text-sm"
                   />
-                  <span className="" id="firstnameerror"></span>
+                  {errors.firstName && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.firstName}
+                    </p>
+                  )}
                 </label>
               </div>
               <div className="flex-1">
-                <label htmlFor="lastName" className="block mb-2">
+                <label htmlFor="lastName" className="block text-gray-400 mb-2">
                   Last name
                   <input
                     id="lastName"
@@ -71,12 +100,17 @@ const Contact = () => {
                     type="text"
                     className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 mt-3 text-sm"
                   />
+                  {errors.lastName && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.lastName}
+                    </p>
+                  )}
                 </label>
               </div>
             </div>
             {/* EMAIL */}
             <div className="flex-1">
-              <label htmlFor="email" className="block mb-2">
+              <label htmlFor="email" className="block text-gray-400 mb-2">
                 Email address
                 <input
                   id="email"
@@ -85,13 +119,18 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="John@example.com"
                   type="email"
-                  className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 text-sm"
+                  className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 text-sm  mt-3"
                 />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.email}
+                  </p>
+                )}
               </label>
             </div>
             {/* SUBJECT */}
             <div className="flex-1">
-              <label htmlFor="subject" className="block mb-2">
+              <label htmlFor="subject" className="block text-gray-400 mb-2">
                 Subject
                 <input
                   id="subject"
@@ -100,14 +139,19 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Project enquiry"
                   type="text"
-                  className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white p-5 rounded-xl text-sm"
+                  className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white p-5 rounded-xl text-sm  mt-3"
                 />
+                {errors.subject && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.subject}
+                  </p>
+                )}
               </label>
             </div>
 
             {/* MESSAGE */}
             <div className="flex-1">
-              <label htmlFor="message" className="block mb-2">
+              <label htmlFor="message" className="block text-gray-400 mb-2">
                 Message
                 <textarea
                   id="message"
@@ -115,14 +159,18 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell me about your project."
-                  className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 h-15 text-sm"
+                  className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 h-15 text-sm  mt-3"
                 />
+                {errors.message && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.message}
+                  </p>
+                )}
               </label>
             </div>
             <button
               className="flex  text-sm items-center justify-center py-2 px-4 rounded-xl self-start bg-orange-400"
               type="submit"
-              onSubmit={handleSubmit}
             >
               Send message <i className="fa-solid fa-right-long"></i>
             </button>
@@ -141,7 +189,7 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          <div className="h-20 border border-orange-600/70 rounded-xl flex items-center px-5 gap-3">
+          <div className="h-20 border border-orange-600/70 rounded-xl flex items-center px-5 gap-3 mb-4">
             <span>
               <img
                 className="w-10 border-1 border-orange-400/30 p-1 rounded-lg"
@@ -156,7 +204,7 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          <div className="h-20 border border-orange-600/70 rounded-xl flex items-center px-5 gap-3">
+          <div className="h-20 border border-orange-600/70 rounded-xl flex items-center px-5 gap-3 mb-4">
             <span>
               <img
                 className="w-10 border-1 border-orange-400/30 p-1 rounded-lg"
@@ -171,7 +219,7 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          <div className="h-20 border border-orange-600/70 rounded-xl flex items-center px-5 gap-3">
+          <div className="h-20 border border-orange-600/70 rounded-xl flex items-center px-5 gap-3 mb-4">
             <span>
               <img
                 className="w-10 border-1 border-orange-400/30 p-1  rounded-lg"
