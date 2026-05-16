@@ -21,6 +21,7 @@ const Contact = () => {
       [e.target.name]: e.value,
     });
   };
+
   const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
@@ -169,7 +170,7 @@ const Contact = () => {
               </label>
             </div>
             <button
-              className="flex  text-sm items-center justify-center py-2 px-4 rounded-xl self-start bg-orange-400"
+              className="flex  text-sm items-center justify-center py-2 px-4 rounded-lg self-start bg-orange-400"
               type="submit"
             >
               Send message <i className="fa-solid fa-right-long"></i>
