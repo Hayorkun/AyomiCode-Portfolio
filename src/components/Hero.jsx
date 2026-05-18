@@ -51,28 +51,28 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex flex-wrap md:flex-nowrap  gap-3 mt-3 justify-center p-1">
-        <div className="p-1 border-1 border-orange-400/50 text-gray-100/50">
+        <div className="p-1 rounded-lg border border-orange-400/50 text-gray-100/50">
           JavaScript
         </div>
-        <div className="p-1 border-1 border-orange-400/50 text-gray-100/50">
+        <div className="p-1 rounded-lg border border-orange-400/50 text-gray-100/50">
           React
         </div>
-        <div className="p-1 border-1 border-orange-400/50 text-gray-100/50">
+        <div className="p-1 rounded-lg border border-orange-400/50 text-gray-100/50">
           Node.js
         </div>
-        <div className="p-1 border-1 border-orange-400/50 text-gray-100/50">
+        <div className="p-1 rounded-lg border border-orange-400/50 text-gray-100/50">
           TypeScript
         </div>
-        <div className="p-1 border-1 border-orange-400/50 text-gray-100/50">
+        <div className="p-1 rounded-lg border border-orange-400/50 text-gray-100/50">
           Tailwind CSS
         </div>
-        <div className="p-1 border-1 border-orange-400/50 text-gray-100/50">
+        <div className="p-1 rounded-lg border border-orange-400/50 text-gray-100/50">
           Git
         </div>
-        <div className="p-1 border-1 border-orange-400/50 text-gray-100/50">
+        <div className="p-1 rounded-lg border border-orange-400/50 text-gray-100/50">
           Figma
         </div>
-        <div className="p-1 border-1 border-orange-400/50 text-gray-100/50">
+        <div className="p-1 rounded-lg border border-orange-400/50 text-gray-100/50">
           Next.js
         </div>
        

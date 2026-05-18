@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -173,7 +174,7 @@ const Contact = () => {
               className="flex  text-sm items-center justify-center py-2 px-4 rounded-lg self-start bg-orange-400"
               type="submit"
             >
-              Send message <i className="fa-solid fa-right-long"></i>
+              Send message  <ArrowRight/>
             </button>
           </form>
         </div>
@@ -193,7 +194,7 @@ const Contact = () => {
           <div className="h-20 border border-orange-600/70 rounded-xl flex items-center px-5 gap-3 mb-4">
             <span>
               <img
-                className="w-10 border-1 border-orange-400/30 p-1 rounded-lg"
+                className="w-10 border border-orange-400/30 p-1 rounded-lg"
                 src="https://ik.imagekit.io/AyomiCode/email-1-svgrepo-com.svg"
                 alt="Email"
               />
@@ -208,7 +209,7 @@ const Contact = () => {
           <div className="h-20 border border-orange-600/70 rounded-xl flex items-center px-5 gap-3 mb-4">
             <span>
               <img
-                className="w-10 border-1 border-orange-400/30 p-1 rounded-lg"
+                className="w-10 border border-orange-400/30 p-1 rounded-lg"
                 src="https://ik.imagekit.io/AyomiCode/github-removebg-preview.png"
                 alt="Email"
               />
@@ -223,7 +224,7 @@ const Contact = () => {
           <div className="h-20 border border-orange-600/70 rounded-xl flex items-center px-5 gap-3 mb-4">
             <span>
               <img
-                className="w-10 border-1 border-orange-400/30 p-1  rounded-lg"
+                className="w-10 border border-orange-400/30 p-1  rounded-lg"
                 src="https://ik.imagekit.io/AyomiCode/briefcase-removebg-preview.png"
                 alt="Email"
               />
@@ -238,7 +239,7 @@ const Contact = () => {
           <div className="h-20 border border-orange-600/70 rounded-xl flex items-center px-5 gap-3">
             <span>
               <img
-                className="w-10 border-1 border-orange-400/30 p-1 rounded-lg"
+                className="w-10 border border-orange-400/30 p-1 rounded-lg"
                 src="https://ik.imagekit.io/AyomiCode/57642948_sl_z_072523_61700_01.jpg"
                 alt="Email"
               />

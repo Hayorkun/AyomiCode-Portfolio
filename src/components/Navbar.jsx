@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="border-b-1 border-orange-300/50 h-15 flex justify-between items-center p-5 md:p-10">
+      <nav className="border-b border-orange-300/50 h-15 flex justify-between items-center p-5 md:p-10 sticky top-0 z-10 bg-black">
         <div>
           <h1 className="text-2xl font-bold text-purple-500 ">
             <NavLink to="/" className="text-orange-400">
@@ -50,7 +50,7 @@ const Navbar = () => {
 
           <NavLink
             to="/contact"
-            className="border-1 border-orange-400 text-sm text-orange-400 px-2 py-1 rounded-lg hover:bg-orange-400 hover:text-white hover:translate-y-1 transition"
+            className="border border-orange-400 text-sm text-orange-400 px-2 py-1 rounded-lg hover:bg-orange-400 hover:text-white hover:translate-y-1 transition"
           >
             Hire me
           </NavLink>
