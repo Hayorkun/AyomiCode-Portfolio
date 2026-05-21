@@ -10,6 +10,7 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     setFormData({
@@ -19,11 +20,11 @@ const Contact = () => {
 
     setErrors({
       ...errors,
-      [e.target.name]: e.value,
+      [e.target.name]: e.target.value,
     });
   };
 
-  const [errors, setErrors] = useState({});
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
