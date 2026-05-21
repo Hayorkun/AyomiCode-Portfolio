@@ -5,7 +5,7 @@ const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const navLinkStyles = ({ isActive }) => ({
-    color: isActive ? "oklch(75% 0.183 55.934)" : "oklch(70.7% 0.022 261.325)",
+    color: isActive ? "oklch(75% 0.183 55.934)" : "#ffff",
     textDecoration: isActive ? "underline" : "none",
   });
 
@@ -70,12 +70,12 @@ const Navbar = () => {
           <button className="close-btn" onClick={() => setSidebarOpen(false)}>
             <i className="fa-solid fa-x"></i>
           </button>
-          <div className="text-3xl text-white w-20 h-20 bg-purple-500/50 flex justify-center items-center border-4 border-purple-500/80 rounded-full">
+          <div className="text-3xl text-white w-20 h-20 bg-orange-400/70 flex justify-center items-center border-4 border-orange-500/80 rounded-full">
             <h2>AY</h2>
           </div>
           <div className="m-0">
-            <h2 className="text-xs text-white">Ayomide Yerokun</h2>
-            <span className="text-lg text-white">Frontend-Developer</span>
+            <h2 className="text-md text-white">Ayomide Yerokun</h2>
+            <span className="text-lg text-white">Fullstack Developer</span>
           </div>
 
           <ul>

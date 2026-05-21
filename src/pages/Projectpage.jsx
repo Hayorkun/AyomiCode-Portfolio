@@ -1,13 +1,16 @@
-import React from 'react'
-import Footer from '../components/Footer'
+import React from "react";
+import Footer from "../components/Footer";
+import Project from "../components/Project";
+import CTA from "../components/CTA";
 
 function ProjectPage() {
   return (
     <>
-
-    <Footer />
+      <Project />
+      <CTA />
+      <Footer />
     </>
   );
 }
 
-export default ProjectPage
+export default ProjectPage;

@@ -25,7 +25,7 @@
 .close-btn {
   background: none;
   border: none;
-  color: #a7aab0;
+  color: #fff;
   font-size: 18px;
   cursor: pointer;
   align-self: flex-end;
@@ -45,8 +45,8 @@
     padding: 10px 0;
     border: none;
     cursor: pointer;
-    color: #a7aab0;
-    background: #492c67;
+    color: white;
+    background: #ff8a05;
   }
 }
 

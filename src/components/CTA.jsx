@@ -23,7 +23,7 @@ const CTA = () => {
             </NavLink>
             <NavLink
               to="/project"
-              className="border-1 px-4 py-2 text-sm text-center rounded-lg hover:text-white hover:bg-black hover:border-black transition"
+              className="border px-4 py-2 text-sm text-center rounded-lg hover:text-white hover:bg-black hover:border-black transition"
             >
               View projects
             </NavLink>
