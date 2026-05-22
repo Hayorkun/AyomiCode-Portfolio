@@ -14,11 +14,10 @@ const Navbar = () => {
     <>
       <nav className="border-b border-orange-300/50 h-15 flex justify-between items-center p-5 md:p-10 sticky top-0 z-10 bg-black">
         <div>
-          <h1 className="text-2xl font-bold text-purple-500 ">
-            <NavLink to="/" className="text-orange-400">
+            <NavLink to="/" className="text-orange-400 font-brand leading-tight font-bold text-2xl ">
               AyomiCode
             </NavLink>
-          </h1>
+          
         </div>
         <div className="hidden md:flex items-center gap-5">
           <ul className="flex gap-5">

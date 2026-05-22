@@ -1,8 +1,14 @@
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <section className="px-5 py-6 md:py-5 md:px-10 border-t border-orange-300/50">
+    <motion.section
+      className="px-5 py-6 md:py-5 md:px-10 border-t border-orange-300/50"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="items-top md:flex justify-around mb-6">
         <div className="flex flex-col justify-center md:flex-">
           <div className=" self-center md:block">
@@ -66,7 +72,6 @@ const Footer = () => {
               <span>Linkedin</span>
               <span>X</span>
               <span>Instagram</span>
-              
             </div>
           </div>
         </div>
@@ -80,7 +85,7 @@ const Footer = () => {
           <span className="text-orange-400">TAILWIND CSS</span> 🧡
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 };
 export default Footer;

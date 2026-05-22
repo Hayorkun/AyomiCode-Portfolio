@@ -7,20 +7,20 @@ const AboutMe = () => {
       className="p-5 md:p-10  md:flex-col"
       initial={{ x: "-100%" }}
       animate={{ x: 0 }}
-      transition={{ type: "tween", stiffness: 300 }}
+      transition={{ type: "tween", stiffness: 300, duration: 0.8 }}
     >
-      <div className=" md:items-center py-7  block md:flex md:gap-6">
+      <div className=" md:items-center py-5  block md:flex md:gap-6">
         <div className="w-full md:w-[62.5%]">
-          <h3 className="text-orange-400 ">WHO I AM</h3>
+          <h3 className="text-orange-400 font-brand leading-tight">WHO I AM</h3>
 
-          <h2 className="text-4xl font-bold mt-3 ">
+          <h2 className="text-4xl font-brand font-extrabold mt-3 leading-tight">
             Building things for the web
           </h2>
-          <p className="mt-3">
+          <p className="mt-3 font-body leading-relaxed">
             A frontend developer who loves turning ideas into polished,
             interactive experiences.
           </p>
-          <p className="my-4">
+          <p className="my-4 font-body leading-relaxed">
             I'm <span className="font-bold text-white">Ayomide Yerokun</span>, a
             frontend developer with 1+ year of experience building responsive,
             accessible, and high-performance web applications. I specialise in
@@ -34,7 +34,7 @@ const AboutMe = () => {
           <div className="flex justify-center md:justify-start gap-4">
             <NavLink
               to="/project"
-              className="border px-6 py-3 rounded-md mt-5 text-xs bg-orange-400 border-none items-center hover:-translate-y-0.5 hover:bg-white hover:text-black transform-gpu transition"
+              className="px-6 py-3 rounded-md mt-5 text-xs bg-orange-400 border-none items-center hover:-translate-y-0.5 hover:bg-white hover:text-black transform-gpu transition"
             >
               See my projects <i class="fa-solid fa-right-long"></i>
             </NavLink>
