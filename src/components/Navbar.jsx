@@ -75,7 +75,7 @@ const Navbar = () => {
           </div>
           <div className="m-0">
             <h2 className="text-md text-white">Ayomide Yerokun</h2>
-            <span className="text-lg text-white">Fullstack Developer</span>
+            <span className="text-lg text-white">Frontend Developer</span>
           </div>
 
           <ul>
