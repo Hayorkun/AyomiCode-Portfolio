@@ -125,7 +125,7 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-          <button className="hire-mBtn">Hire me</button>
+          <NavLink to="/contact" className="hire-mBtn">Hire me</NavLink>
         </div>
       </nav>
     </>
