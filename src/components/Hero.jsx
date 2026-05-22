@@ -1,8 +1,14 @@
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="px-5 py-10 flex flex-col justify-center text-center">
+    <motion.section
+      className="px-5 py-20 flex flex-col justify-center text-center border"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="flex items-center self-center gap-1 bg-orange-400 border border-orange-600 text-white rounded-full p-1 text-xs w-fit mb-2">
         <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400/60 opacity-90"></span>
@@ -46,7 +52,7 @@ const Hero = () => {
           <p className="text-xs mt-0"> Years exp.</p>
         </div>
         <div className="m-0">
-          <h2 className="text-4xl text-orange-400 font-serif">5+</h2>
+          <h2 className="text-4xl text-orange-400 font-serif">1+</h2>
           <p className="text-xs mt-0">clients</p>
         </div>
       </div>
@@ -75,9 +81,8 @@ const Hero = () => {
         <div className="p-1 rounded-lg border border-orange-400/50 text-gray-100/50">
           Next.js
         </div>
-       
       </div>
-    </section>
+    </motion.section>
   );
 };
 
