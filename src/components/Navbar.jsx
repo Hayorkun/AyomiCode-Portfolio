@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Menu } from "lucide-react";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -57,10 +58,10 @@ const Navbar = () => {
         </div>
 
         <button
-          className="block md:hidden size-10 items-center cursor-pointer"
+          className="block md:hidden items-center cursor-pointer"
           onClick={() => setSidebarOpen(true)}
         >
-          <i className="fa-solid fa-bars"></i>
+          <Menu/>
         </button>
         {sidebarOpen && (
           <div className="fixed z-0" onClick={() => setSidebarOpen(false)} />
