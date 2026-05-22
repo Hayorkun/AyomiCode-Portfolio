@@ -42,11 +42,11 @@ const Footer = () => {
           <div className="flex flex-col gap-1 ">
             <h2 className="mb-2 text-orange-300 font-bold">PAGES</h2>
             <div className="flex flex-col self-center md:self-start">
-              <NavLink>Home</NavLink>
-              <NavLink>About</NavLink>
-              <NavLink>Projects</NavLink>
-              <NavLink>Skills</NavLink>
-              <NavLink>Contact</NavLink>
+              <NavLink to="/">Home</NavLink>
+              <NavLink to="/about">About</NavLink>
+              <NavLink to="/projects">Projects</NavLink>
+              <NavLink to="/skills">Skills</NavLink>
+              <NavLink to="/contact">Contact</NavLink>
             </div>
           </div>
           <div className="flex flex-col gap-1 ">
@@ -62,11 +62,11 @@ const Footer = () => {
           <div className="flex flex-col gap-1 ">
             <h2 className="mb-2 text-orange-300 font-bold">CONNECTS</h2>
             <div className="flex flex-col self-center md:self-start">
-              <NavLink>Home</NavLink>
-              <NavLink>About</NavLink>
-              <NavLink>Projects</NavLink>
-              <NavLink>Skills</NavLink>
-              <NavLink>Contact</NavLink>
+              <span>GitHub</span>
+              <span>Linkedin</span>
+              <span>X</span>
+              <span>Instagram</span>
+              
             </div>
           </div>
         </div>
