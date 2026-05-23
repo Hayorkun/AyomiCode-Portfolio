@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const AboutMe = () => {
   return (
     <motion.section
-      className="p-5 md:p-10  md:flex-col"
+      className="px-5 md:px-10  md:flex-col mb-5"
       initial={{ x: "-100%" }}
       animate={{ x: 0 }}
       transition={{ type: "tween", stiffness: 300, duration: 0.8 }}

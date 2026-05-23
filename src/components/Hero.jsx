@@ -8,7 +8,7 @@ const Hero = () => {
 
 
   return (
-    <motion.section className="px-5 py-10 flex flex-col justify-center text-center ">
+    <motion.section className="h-screen px-5 py-7 flex flex-col justify-center text-center ">
       <div className="flex items-center self-center gap-1 bg-orange-400 border border-orange-600 text-white rounded-full p-1 text-sm w-fit mb-3">
         <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400/60 opacity-90"></span>
@@ -54,7 +54,7 @@ const Hero = () => {
           <p className="text-sm mt-0 font-body leading-relaxed">clients</p>
         </div>
       </div>
-      <div className="flex flex-wrap md:flex-nowrap  gap-4 mt-4 justify-center p-1">
+      <div className="flex flex-wrap md:flex-nowrap gap-4 mt-4 justify-center p-1">
         <div className="p-1 rounded-lg border border-orange-400/50 text-gray-100/50">
           JavaScript
         </div>
