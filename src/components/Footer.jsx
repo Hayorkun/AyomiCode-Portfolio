@@ -69,10 +69,9 @@ const Footer = () => {
             <div className="flex flex-col gap-1 ">
               <h2 className="mb-2 text-orange-300 font-bold">CONNECTS</h2>
               <div className="flex flex-col self-center md:self-start">
-                <span>GitHub</span>
-                <span>Linkedin</span>
-                <span>X</span>
-                <span>Instagram</span>
+                <a href="https://github.com/Hayorkun">GitHub</a>
+                <a href="https://www.linkedin.com/in/ayomide-yerokun-1a0394388?utm_source=share_via&utm_content=profile&utm_medium=member_ios">Linkedin</a>
+                <a href="https://x.com/bug_huntayo?s=21">X</a>
               </div>
             </div>
           </div>

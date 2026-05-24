@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ArrowLeft } from "lucide-react";
 
 const AboutMe = () => {
   return (
@@ -38,7 +39,7 @@ const AboutMe = () => {
             <div className="flex justify-center md:justify-start gap-4">
               <NavLink
                 to="/project"
-                className="px-6 py-3 rounded-md mt-5 text-xs bg-orange-400 border-none items-center hover:-translate-y-0.5 hover:bg-white hover:text-black transform-gpu transition"
+                className="px-6 py-3 rounded-md mt-5 text-xs bg-orange-400 border-none items-center hover:bg-white hover:text-black hover:-translate-y-0.5 transform-gpu transition"
               >
                 See my projects <i class="fa-solid fa-right-long"></i>
               </NavLink>
