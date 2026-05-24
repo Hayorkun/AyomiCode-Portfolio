@@ -18,7 +18,7 @@ const STATS = [["3+","Projects"],["1+","Years exp."],["1+","Clients"]];
 const Hero = () => {
   return (
     <motion.section
-      className=" px-5 py-15 md:py-27 md:px-10 flex justify-center flex-col text-center"
+      className=" px-5 py-25 md:py-35 md:px-10 flex justify-center flex-col text-center"
       variants={container}
       initial="hidden"
       animate="show"
