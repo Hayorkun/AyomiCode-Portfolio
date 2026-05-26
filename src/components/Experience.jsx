@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-// ── animation variants ──────────────────────────────────────────────────────
 const sectionVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -49,7 +48,6 @@ const textVariants = {
   }),
 };
 
-// ── data ─────────────────────────────────────────────────────────────────────
 const experiences = [
   {
     period: "2025 - 2026",
@@ -77,13 +75,11 @@ const experiences = [
   },
 ];
 
-// ── component ────────────────────────────────────────────────────────────────
 const Experience = () => {
   return (
     <div className="w-full px-5 py-10 md:py-15 md:px-10 flex justify-center">
-      <div className="my-max-width w-full">
 
-        {/* Header */}
+      <div className="my-max-width w-full">
         <motion.p
           className="text-orange-300 font-bold mb-3"
           variants={sectionVariants}
@@ -105,12 +101,10 @@ const Experience = () => {
           Work-history
         </motion.h3>
 
-        {/* Timeline */}
         <div className="mt-5 block">
           {experiences.map((exp, i) => (
             <div key={i} className="flex gap-5">
 
-              {/* Dot + Line */}
               <div className="flex flex-col items-center">
                 <motion.div
                   custom={i}
@@ -118,7 +112,7 @@ const Experience = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, margin: "-40px" }}
-                  className="p-1 h-6 w-6 border border-orange-500 flex items-center justify-center rounded-xl"
+                  className="p-1 h-6 w-6 border border-orange-500 flex items-center justify-center rounded-xl z-5"
                 >
                   <span className="h-3 w-3 bg-orange-400 rounded-xl" />
                 </motion.div>
@@ -136,7 +130,6 @@ const Experience = () => {
                 )}
               </div>
 
-              {/* Content */}
               <motion.div
                 custom={i}
                 variants={timelineItemVariants}

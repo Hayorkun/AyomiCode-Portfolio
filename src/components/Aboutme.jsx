@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
-// ── animation variants ──────────────────────────────────────────────────────
+
 const pageVariants = {
   hidden: { x: "-100%", opacity: 0 },
   visible: {
@@ -55,7 +55,6 @@ const buttonVariants = {
   }),
 };
 
-// ── component ────────────────────────────────────────────────────────────────
 const AboutMe = () => {
   const infoRows = [
     { label: "Location", value: "Oyo, Nigeria", className: "" },
@@ -75,7 +74,6 @@ const AboutMe = () => {
       <div className="md:items-center justify-center py-5 md:flex md:gap-6">
         <div className="my-max-width w-full md:flex justify-between gap-5">
 
-          {/* ── Left column ── */}
           <motion.div
             className="w-full md:w-[62.5%]"
             variants={containerVariants}
@@ -151,7 +149,6 @@ const AboutMe = () => {
             </motion.div>
           </motion.div>
 
-          {/* ── Right card ── */}
           <motion.div
             className="mt-10 md:w-[37.5%] w-full border border-orange-300/30 bg-orange-300/10 px-8 py-4 flex flex-col justify-center rounded-xl"
             variants={cardVariants}

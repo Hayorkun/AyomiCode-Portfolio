@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
-// ── variants ────────────────────────────────────────────────────────────────
 const cardVariants = {
   hidden: { opacity: 0, y: 50, scale: 0.96 },
   visible: {
@@ -35,7 +34,6 @@ const buttonVariants = {
   }),
 };
 
-// ── component ────────────────────────────────────────────────────────────────
 const CTA = () => {
   return (
     <div className="h-full px-5 py-10 md:py-15 flex justify-center">
@@ -47,9 +45,8 @@ const CTA = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
         >
-          {/* Subtle background shimmer */}
           <motion.div
-            className="absolute inset-0 bg-gradient-to-br from-orange-300/30 via-transparent to-orange-600/20 pointer-events-none"
+            className="absolute inset-0 bg-linear-to-br from-orange-300/30 via-transparent to-orange-600/20 pointer-events-none"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
