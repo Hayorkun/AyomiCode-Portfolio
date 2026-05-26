@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="border-b border-orange-300/50 h-15 flex justify-center items-center p-5 md:p-10 sticky top-0 z-10 bg-black">
+      <nav className="border-b border-orange-300/50 h-15 flex justify-center items-center p-5 md:p-10 sticky top-0 z-20 bg-black">
         <div className="my-max-width w-full flex justify-between">
           <div>
             <NavLink
