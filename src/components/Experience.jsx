@@ -1,6 +1,6 @@
 const Experience = () => {
   return (
-    <div className="h-fit w-full px-5 py-5 md:px-10 md:py-10 flex justify-center">
+    <div className="w-full px-5 py-10 md:py-15 md:px-10 flex justify-center">
       <div className="my-max-width w-full">
         <p className="text-orange-300 font-bold mb-3">Experience</p>
         <h3 className="text-2xl font-semibold font-syne">Work-history</h3>

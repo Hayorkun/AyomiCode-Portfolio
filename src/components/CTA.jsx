@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const CTA = () => {
   return (
     <>
-      <div className="h-full px-5 py-5 md:px-10 md:py-10 mb-10 flex justify-center">
+      <div className="h-full px-5 py-10 md:py-15 flex justify-center">
        <div className="my-max-width w-full ">
          <div className="w-full rounded-tl-4xl rounded-br-3xl bg-orange-400 p-10 flex flex-col justify-center items-center">
           <h2 className="px-2 w-2xs md:w-lg font-brand leading-tight mb-3 font-extrabold text-4xl text-center">

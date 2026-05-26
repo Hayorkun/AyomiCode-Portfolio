@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <motion.section
-      className="px-5 py-6 md:py-5 md:px-10 border-t border-orange-300/50 flex justify-center"
+      className="px-5 py-10 md:py-15 border-t border-orange-300/50 flex justify-center"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}

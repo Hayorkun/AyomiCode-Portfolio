@@ -1,7 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { AtomIcon, Wrench, Palette, Sparkle } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Skills = () => {
+  const container = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.12 } },
+  };
+
+  const item = {
+    hidden: { opacity: 0, x: 20 },
+    show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
+
   const SkillsGroup = [
     {
       icon: [<AtomIcon className="bg-orange-400 p-1 rounded-md" />],
@@ -45,48 +56,69 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="px-5 py-5 md:px-10 md:py-10 flex justify-center">
+    <motion.section
+      className="px-5 py-10 md:py-15 md:px-10 flex justify-center"
+      variants={container}
+      initial="hidden"
+      animate="show"
+    >
       <div className="my-max-width w-full">
-        <div className="mt-7">
-          <p className="mb-3 text-orange-400 font-brand font-semibold leading-relaxed">WHAT I KNOW</p>
-          <h1 className="text-6xl font-brand font-extrabold leading-tight mt-3">Skills</h1>
+        <motion.div variants={item} className="mt-7">
+          <p className="mb-3 text-orange-400 font-brand font-semibold leading-relaxed">
+            WHAT I KNOW
+          </p>
+          <h1 className="text-6xl font-brand font-extrabold leading-tight mt-3">
+            Skills
+          </h1>
           <p className="mt-3 text-gray-400/70">
             Tools and technologies i work with daily.
           </p>
-        </div>
-        <div className="mt-10 grid gap-6">
+        </motion.div>
+
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="mt-10 grid gap-6"
+        >
           {SkillsGroup.map((skill, index) => (
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+            <motion.div
+              key={index}
+              variants={item}
+              className="bg-white/5 border border-white/10 rounded-2xl p-6"
+            >
               <div className="flex items-center gap-3 mb-6">
                 {skill.icon}
-
                 <h2 className="text-2xl font-semibold">{skill.title}</h2>
               </div>
-
               <div className="space-y-5">
                 {skill.bars.map((bar, i) => (
                   <div key={i}>
                     <div className="flex justify-between mb-2">
                       <span>{bar.name}</span>
-
                       <span>{bar.pct}%</span>
                     </div>
-
                     <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                      <div
-                        className="h-full rounded-full bg-linear-to-r from-orange-300 to-orange-600 transition-all duration-1000 ease-out"
-                        style={{
-                          width: animate ? `${bar.pct}%` : "0%",
+                      <motion.div
+                        className="h-full rounded-full bg-linear-to-r from-orange-300 to-orange-600"
+                        initial={{ width: "0%" }}
+                        whileInView={{ width: `${bar.pct}%` }}
+                        viewport={{ once: true }}
+                        transition={{
+                          duration: 1,
+                          ease: "easeOut",
+                          delay: i * 0.1,
                         }}
                       />
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-        <div className="py-7 mt-10">
+        </motion.div>
+        <motion.div variants={item} className="py-7 mt-10">
           <h3 className="text-orange-400 text-lg">Soft Skills</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 items-center gap-2 py-3">
             <span className="flex gap-1 items-center justify-center border border-orange-300/20 py-2 rounded-xl">
@@ -115,9 +147,9 @@ const Skills = () => {
               <Sparkle className="size-4 stroke-3 fill-white" /> Self-motivated
             </span>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

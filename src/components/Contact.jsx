@@ -56,7 +56,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="px-5 py-5 md:px-10 md:py-10 flex justify-center">
+    <section className="px-5 py-10 md:py-15 md:px-10 flex justify-center">
       <div className="my-max-width w-full">
         <div className="md:items-center py-5  block md:flex md:gap-10">
           <div className="w-full md:w-[62.5%]">

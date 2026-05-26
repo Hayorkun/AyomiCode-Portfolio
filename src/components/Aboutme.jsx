@@ -5,7 +5,7 @@ import { ArrowLeft } from "lucide-react";
 const AboutMe = () => {
   return (
     <motion.section
-      className="px-5 md:px-10  md:flex-col mb-5"
+      className="px-5 py-10 md:py-15 md:px-10 md:flex-col"
       initial={{ x: "-100%" }}
       animate={{ x: 0 }}
       transition={{ type: "tween", stiffness: 300, duration: 0.8 }}
