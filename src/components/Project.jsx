@@ -1,51 +1,18 @@
-import { div } from "framer-motion/client";
-import React from "react";
-import Oneproject from "./Oneproject";
+import { div } from "framer-motion/client"
+import { useProject } from "../context/ProjectContext"
 
-function Project() {
-  const binID = "6a074aefc0954111d82b1cd0";
+const Project = () => {
 
-  const [projects, setProjects] = useState([]);
-
-  async function fetchProject() {
-    try {
-      const response = await fetch(
-        "https://api.jsonbin.io/v3/b/6a074aefc0954111d82b1cd0",
-
-        {
-          headers: {
-            "X-Master-Key":
-              "$2a$10$gKVeRpsyh9oru1uCjHlC4.cA.LEy08LDxqYiPDp4N1EQLuB2oFoMu",
-          },
-        },
-      );
-
-      const data = await response.json();
-
-      setProjects(data);
-
-      console.log(data);
-
-    } catch (error) {
-
-      console.log(error);
-
-    }
-  }
-
-  fetchProject();
+  const { projects } = useProject(); 
 
   return (
-    <section>
-      <h1>In progress</h1>
-      {projects.slice(0, 2).map((project, index) => (
-        <Oneproject
-          key={index}
-          name={project.name}
-          description={project.description}
-          image={project.image}
-        />
-      ))}
+    <section className="px-5 py-10 md:py-15 md:px-10">
+        <div className="border">
+          <div>
+            <P></P>
+            <h1 className="font-brand font-extrabold">Projects</h1>
+          </div>
+        </div>
     </section>
   );
 }

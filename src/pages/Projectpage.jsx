@@ -1,12 +1,12 @@
-import React from "react";
-import Footer from "../components/Footer";
-import Project from "../components/Project";
-import CTA from "../components/CTA";
+import Footer from "../components/Footer"
+import Project from "../components/Project"
+import CTA from "../components/CTA"
+
 
 function ProjectPage() {
   return (
     <>
-      <Project />
+    <Project/>
       <CTA />
       <Footer />
     </>

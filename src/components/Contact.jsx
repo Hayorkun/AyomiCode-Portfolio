@@ -20,7 +20,7 @@ const Contact = () => {
 
     setErrors({
       ...errors,
-      [e.target.name]: e.target.value,
+      [e.target.name]: "",
     });
   };
 
@@ -107,7 +107,7 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder="Doe"
                       type="text"
-                      className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 mt-3 text-sm"
+                      className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 mt-3 text-base"
                     />
                     {errors.lastName && (
                       <p className="text-red-500 text-sm mt-1">
@@ -128,7 +128,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="John@example.com"
                     type="email"
-                    className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 text-sm  mt-3"
+                    className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 text-base mt-3"
                   />
                   {errors.email && (
                     <p className="text-red-500 text-sm mt-1">{errors.email}</p>
@@ -146,7 +146,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="Project enquiry"
                     type="text"
-                    className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white p-5 rounded-xl text-sm  mt-3"
+                    className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white p-5 rounded-xl text-base mt-3"
                   />
                   {errors.subject && (
                     <p className="text-red-500 text-sm mt-1">
@@ -166,7 +166,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell me about your project."
-                    className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 h-15 text-sm  mt-3"
+                    className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 h-15 text-base mt-3"
                   />
                   {errors.message && (
                     <p className="text-red-500 text-sm mt-1">
