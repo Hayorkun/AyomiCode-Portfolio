@@ -85,7 +85,7 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder="John"
                       type="text"
-                      className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 mt-3 text-sm"
+                      className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 mt-3 text-base"
                     />
                     {errors.firstName && (
                       <p className="text-red-500 text-sm mt-1">
@@ -166,7 +166,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell me about your project."
-                    className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 h-15 text-base mt-3"
+                    className="w-full border-0 bg-gray-700 focus:bg-gray-700 text-white placeholder-white rounded-xl p-5 h-20 text-base mt-3"
                   />
                   {errors.message && (
                     <p className="text-red-500 text-sm mt-1">
