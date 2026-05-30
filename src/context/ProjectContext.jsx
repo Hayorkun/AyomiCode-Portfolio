@@ -21,10 +21,12 @@ export const ProjectProvider = ({ children }) => {
           },
         },
       );
-      setProjects(response.data.record);
+      const data = response.data.record.projects
+      setProjects(data);
+      console.log(data);
 
       } catch (error) {
-        console.log("Error fetching data", error)
+        ("Error fetching data", error)
       }
     }
 

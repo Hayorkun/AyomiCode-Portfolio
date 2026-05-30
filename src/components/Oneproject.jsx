@@ -1,22 +1,27 @@
-import React from 'react'
-import Project from './Project'
-import { section } from 'framer-motion/client'
-
-function Oneproject({ name, description, image }) {
+function Oneproject({ project }) {
   return (
-   <section className='px-5 py-10 md:py-15 md:px-10'>
-    <div className='border w-full my-max-width mx-auto
-    '>
-       <div className=' h-50 text-white'>
-      <p>{name}</p>
-
-      <p>{description}</p>
-
-      <img src={image} alt="" />
+    <div className="rounded-2xl border border-gray-500">
+      <div className="h-70 rounded-t-2xl  flex justify-center bg-orange-200 mb-2">
+        <img
+          className="w-70  mt-3 object-top object-cover"
+          src={project.image}
+          alt=""
+        />
+      </div>
+      <div className="p-3 w-fit">
+        <p className="w-fit py-2 px-3 border border-orange-400/80 rounded-3xl font-body text-xs text-orange-400 font-extrabold mb-1">
+          Web App
+        </p>
+        <h3 className="font-body font-bold text-xl leading-relaxed mb-1 text-white/80">{project.name}</h3>
+        <p className="font-body text-sm text-gray-400 ">{project.description}</p>
+      </div>
+      <div className="p-3 flex flex-wrap gap-3"> 
+        {project.stack.map((t) => (
+          <button className="py-1 px-2 border text-orange-400 rounded-lg" key={t}>{t}</button>
+        ))}
+      </div>
     </div>
-    </div>
-   </section>
-  )
+  );
 }
 
-export default Oneproject
+export default Oneproject;

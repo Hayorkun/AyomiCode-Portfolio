@@ -82,7 +82,7 @@ const AboutMe = () => {
           >
             <motion.h3
               variants={fadeUp}
-              className="mb-3 text-orange-400 font-brand font-semibold leading-relaxed"
+              className="text-orange-400 font-brand font-semibold leading-relaxed"
             >
               WHO I AM
             </motion.h3>
