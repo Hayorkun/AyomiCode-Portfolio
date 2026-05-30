@@ -11,13 +11,12 @@ export const ProjectProvider = ({ children }) => {
   useEffect(() => {
     const fetchProjects = async() => {
       try {
-           const response = await axios.get(
-        "https://api.jsonbin.io/v3/b/6a074aefc0954111d82b1cd0",
 
+           const response = await axios.get(
+            import.meta.env.VITE_JSONBIN_URL,
         {
           headers: {
-            "X-Master-Key":
-              "$2a$10$gKVeRpsyh9oru1uCjHlC4.cA.LEy08LDxqYiPDp4N1EQLuB2oFoMu",
+            "X-Master-Key": import.meta.env.VITE_JSONBIN_MASTER_KEY,
           },
         },
       );

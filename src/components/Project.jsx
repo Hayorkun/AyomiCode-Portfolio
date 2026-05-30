@@ -1,12 +1,29 @@
-import Oneproject from "./Oneproject";
-import { useProject } from "../context/ProjectContext";
+import Oneproject from "./Oneproject"
+import { useProject } from "../context/ProjectContext"
+import { motion } from "framer-motion"
+import { NavLink } from "react-router-dom"
+import { ArrowLeft } from "lucide-react"
 
 const Project = () => {
 
   const {projects} = useProject()
 
+  const container = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.12 } },
+  };
+
+  const item = {
+    hidden: { opacity: 0, x: 20 },
+    show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
+
   return (
-    <section className="px-5 py-10 md:py-15 md:px-10">
+    <section
+    variant={container}
+    initial="hidden"
+    animate="show"
+    className="px-5 py-10 md:py-15 md:px-10 flex justify-center">
         <div className="my-max-width w-full">
           <div>
             <p className="font-body font-semibold text-orange-400">Selected Projects</p>
@@ -18,6 +35,7 @@ const Project = () => {
             <Oneproject key={index} project={project}/>
            ))}
           </div>
+           <button>View all projects <ArrowLeft/></button>
         </div>
     </section>
   );
