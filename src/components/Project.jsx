@@ -42,7 +42,7 @@ const Project = () => {
         <div className="flex justify-center">
           <NavLink
           to="/project"
-          className="flex w-40 p-1.5 rounded-xl border mt-5 justify-center ">
+          className="flex w-40 p-1.5 rounded-xl border mt-7 justify-center ">
             View all projects <ArrowRight />
           </NavLink>
         </div>
