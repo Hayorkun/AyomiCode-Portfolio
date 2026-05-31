@@ -1,12 +1,11 @@
-import Oneproject from "./Oneproject"
-import { useProject } from "../context/ProjectContext"
-import { motion } from "framer-motion"
-import { NavLink } from "react-router-dom"
-import { ArrowLeft } from "lucide-react"
+import Oneproject from "./Oneproject";
+import { useProject } from "../context/ProjectContext";
+import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const Project = () => {
-
-  const {projects} = useProject()
+  const { projects } = useProject();
 
   const container = {
     hidden: {},
@@ -20,25 +19,36 @@ const Project = () => {
 
   return (
     <section
-    variant={container}
-    initial="hidden"
-    animate="show"
-    className="px-5 py-10 md:py-15 md:px-10 flex justify-center">
-        <div className="my-max-width w-full">
-          <div>
-            <p className="font-body font-semibold text-orange-400">Selected Projects</p>
-            <h1 className="font-brand font-extrabold leading-tight text-4xl mt-3">Featured Projects</h1>
-            <p className="mt-3 text-gray-400/70">A peek at what I've shipped.</p>
-          </div>
-          <div className="mt-10 grid gap-6">
-           {projects.map((project, index) => (
-            <Oneproject key={index} project={project}/>
-           ))}
-          </div>
-           <button>View all projects <ArrowLeft/></button>
+      variant={container}
+      initial="hidden"
+      animate="show"
+      className="px-5 py-10 md:py-15 md:px-10 flex justify-center"
+    >
+      <div className="my-max-width w-full">
+        <div>
+          <p className="font-body font-semibold text-orange-400">
+            Selected Projects
+          </p>
+          <h1 className="font-brand font-extrabold leading-tight text-4xl mt-3">
+            Featured Projects
+          </h1>
+          <p className="mt-3 text-gray-400/70">A peek at what I've shipped.</p>
         </div>
+        <div className="mt-10 grid md:grid-cols-2 gap-10">
+          {projects.map((project, index) => (
+            <Oneproject key={index} project={project} />
+          ))}
+        </div>
+        <div className="flex justify-center">
+          <NavLink
+          to="/project"
+          className="flex w-40 p-1.5 rounded-xl border mt-5 justify-center ">
+            View all projects <ArrowRight />
+          </NavLink>
+        </div>
+      </div>
     </section>
   );
-}
+};
 
 export default Project;

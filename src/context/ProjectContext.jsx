@@ -7,32 +7,35 @@ const ProjectContext = createContext();
 export const ProjectProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
 
-
   useEffect(() => {
-    const fetchProjects = async() => {
-      try {
+    const fetchProjects = async () => {
+      const URL = import.meta.env.VITE_JSONBIN_URL;
+      const KEY = import.meta.env.VITE_JSONBIN_MASTER_KEY;
 
-           const response = await axios.get(
-            import.meta.env.VITE_JSONBIN_URL,
-        {
+      try {
+        const response = await axios.get(URL, {
           headers: {
-            "X-Master-Key": import.meta.env.VITE_JSONBIN_MASTER_KEY,
+            "X-Master-Key": KEY,
           },
-        },
-      );
-      const data = response.data.record.projects
-      setProjects(data);
-      console.log(data);
+        });
+
+        const data = response.data.record.projects;
+        setProjects(data);
 
       } catch (error) {
-        ("Error fetching data", error)
+        console.error("Error fetching data", error.response?.status);
+        console.error("Error message", error.response?.data);
       }
-    }
+    };
 
-    fetchProjects() 
-  }, [])
+    fetchProjects();
+  }, []);
 
-  return <ProjectContext.Provider value={{ projects }}>{children}</ProjectContext.Provider>;
+  return (
+    <ProjectContext.Provider value={{ projects }}>
+      {children}
+    </ProjectContext.Provider>
+  );
 };
 
 export const useProject = () => {
