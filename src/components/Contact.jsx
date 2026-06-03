@@ -52,15 +52,15 @@ const Contact = () => {
     if (Object.keys(newErrors).length > 0) return;
 
     emailjs.send(
-      "YOUR_SERVICE_ID",
-      "YOUR_TEMPLATE_ID",
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       {
         from_name: `${formData.firstName} ${formData.lastName}`,
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
       },
-      "YOUR_PUBLIC_KEY",
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
     );
   };
 
