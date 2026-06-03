@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -48,11 +49,19 @@ const Contact = () => {
 
     setErrors(newErrors);
 
-    if (Object.keys(newErrors).length > 0) {
-      return;
-    }
+    if (Object.keys(newErrors).length > 0) return;
 
-    console.log(formData);
+    emailjs.send(
+      "YOUR_SERVICE_ID",
+      "YOUR_TEMPLATE_ID",
+      {
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      "YOUR_PUBLIC_KEY",
+    );
   };
 
   return (
@@ -60,7 +69,9 @@ const Contact = () => {
       <div className="my-max-width w-full">
         <div className="md:items-center py-5  block md:flex md:gap-10">
           <div className="w-full md:w-[62.5%]">
-            <p className="mb-3 text-orange-400 font-brand font-semibold leading-relaxed">LET'S WORK TOGETHER</p>
+            <p className="mb-3 text-orange-400 font-brand font-semibold leading-relaxed">
+              LET'S WORK TOGETHER
+            </p>
             <h1 className="text-4xl font-brand font-extrabold leading-tight mb-5">
               Get in touch
             </h1>
