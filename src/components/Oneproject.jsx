@@ -1,7 +1,7 @@
 function Oneproject({ project }) {
   return (
-    <div className="rounded-2xl border border-gray-50 hover:shadow-orange-200 hover:shadow-lg transition-transform duration-300 hover:scale-102 ease-in-out">
-      <div className="h-70 rounded-t-2xl  flex justify-center bg-orange-200 mb-2">
+    <div className="h-full rounded-2xl border border-gray-50 hover:shadow-orange-200 hover:shadow-lg transition-transform duration-300 hover:scale-102 ease-in-out">
+      <div className="h-60 rounded-t-2xl  flex justify-center bg-orange-200 mb-2">
         <img
           className="w-70  mt-3 object-top object-cover"
           src={project.image}

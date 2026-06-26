@@ -6,8 +6,10 @@ const ProjectContext = createContext();
 
 export const ProjectProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    
     const fetchProjects = async () => {
       const URL = import.meta.env.VITE_JSONBIN_URL;
       const KEY = import.meta.env.VITE_JSONBIN_MASTER_KEY;

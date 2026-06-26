@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, RefreshCcw } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -24,6 +24,8 @@ const Contact = () => {
       [e.target.name]: "",
     });
   };
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -51,24 +53,32 @@ const Contact = () => {
 
     if (Object.keys(newErrors).length > 0) return;
 
-    emailjs.send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      {
-        from_name: `${formData.firstName} ${formData.lastName}`,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-      },
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-    );
+    setIsLoading(true);
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: `${formData.firstName} ${formData.lastName}`,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      )
+      .then(() => alert("Message sent!"));
+      setFormData({ firstName: "", lastName: "", email: "", subject: "", message: "" 
+      })
+      .catch((err) => console.error("EmailJS error:", err))
+      .finally(() => setIsLoading(false));
   };
 
   return (
     <section className="px-5 py-10 md:py-15 md:px-10 flex justify-center">
       <div className="my-max-width w-full">
         <div className="md:items-center py-5  block md:flex md:gap-10">
-          <div className="w-full md:w-[62.5%]">
+          <div className="w-full md:w-[62.5%] mb-5">
             <p className="mb-3 text-orange-400 font-brand font-semibold leading-relaxed">
               LET'S WORK TOGETHER
             </p>
@@ -189,12 +199,13 @@ const Contact = () => {
               <button
                 className="flex  text-sm items-center justify-center py-2 px-4 rounded-lg self-start bg-orange-400"
                 type="submit"
+                disabled={isLoading}
               >
-                Send message <ArrowRight />
+                 {isLoading ? "Sending..." : "Send message"} <ArrowRight />
               </button>
             </form>
           </div>
-          <div className="py-7 md:py-10 w-full md:w-[37.5%] ">
+          <div className="py-7 md:py-10 w-full md:w-[37.5%]">
             <div className="flex items-center self-center gap-3 border border-orange-600/70 text-white rounded-xl px-5 h-20 mb-4">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400/60 opacity-90"></span>

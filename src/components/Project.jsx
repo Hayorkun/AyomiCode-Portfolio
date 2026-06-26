@@ -18,14 +18,14 @@ const Project = () => {
   };
 
   return (
-    <section
-      variant={container}
+    <motion.section
+      variants={container}
       initial="hidden"
       animate="show"
       className="px-5 py-10 md:py-15 md:px-10 flex justify-center"
     >
       <div className="my-max-width w-full">
-        <div>
+        <motion.div variants={item}>
           <p className="font-body font-semibold text-orange-400">
             Selected Projects
           </p>
@@ -33,21 +33,26 @@ const Project = () => {
             Featured Projects
           </h1>
           <p className="mt-3 text-gray-400/70">A peek at what I've shipped.</p>
-        </div>
-        <div className="mt-10 grid md:grid-cols-2 gap-10">
+        </motion.div>
+
+        <div className="mt-10 grid md:grid-cols-2 gap-10 items-stretch">
           {projects.map((project, index) => (
-            <Oneproject key={index} project={project} />
+            <motion.div key={index} variants={item}>
+              <Oneproject project={project} />
+            </motion.div>
           ))}
         </div>
-        <div className="flex justify-center">
+
+        <motion.div variants={item} className="flex justify-center">
           <NavLink
-          to="/project"
-          className="flex w-40 p-1.5 rounded-xl border mt-7 justify-center ">
+            to="/project"
+            className="flex w-40 p-1.5 rounded-xl border mt-7 justify-center"
+          >
             View all projects <ArrowRight />
           </NavLink>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
