@@ -15,14 +15,6 @@ const Projects = () => {
     show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
   };
 
-  if (isLoading) {
-    return (
-      <div className="text-center py-10 text-orange-500">
-        Loading projects...
-      </div>
-    );
-  }
-
   return (
     <motion.section
       variants={container}
@@ -41,12 +33,22 @@ const Projects = () => {
           <p className="mt-3 text-gray-400/70">A peek at what I've shipped.</p>
         </motion.div>
 
-        <div className="mt-10 grid md:grid-cols-2 gap-10 items-stretch">
-          {projects.map((project, index) => (
-            <motion.div key={index} variants={item}>
-              <Oneproject project={project} />
-            </motion.div>
-          ))}
+        <div>
+          {isLoading ? (
+            <div className="flex justify-center mt-10">
+              <div class="w-12 h-12 border-4 border-dashed border-gray-200 border-t-orange-400 rounded-full animate-spin [animation-duration:1.5s]"></div>
+            </div>
+          ) : (
+            <>
+              <div className="mt-10 grid md:grid-cols-2 gap-10 items-stretch">
+                {projects.map((project, index) => (
+                  <motion.div key={index} variants={item}>
+                    <Oneproject project={project} />
+                  </motion.div>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </div>
     </motion.section>

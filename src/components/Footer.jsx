@@ -57,7 +57,11 @@ const pages = [
   { to: "/contact", label: "Contact" },
 ];
 
-const projects = ["Home", "About", "Projects", "Skills", "Contact"];
+const projects = [
+  { to: "/projectpage", label: "Portfolio" },
+  { to: "/projectpage", label: "Briefly" },
+  { to: "/projectpage", label: "Todo App" },
+];
 
 const connects = [
   { href: "https://github.com/Hayorkun", label: "GitHub" },
@@ -180,9 +184,9 @@ const Footer = () => {
             >
               <h2 className="mb-2 text-orange-300 font-bold">PROJECTS</h2>
               <div className="flex flex-col self-center md:self-start gap-1">
-                {projects.map((label) => (
-                  <motion.div key={label} {...linkHover}>
-                    <NavLink>{label}</NavLink>
+                {projects.map((l) => (
+                  <motion.div key={l.to} {...linkHover}>
+                    <NavLink to={l.to}>{l.label}</NavLink>
                   </motion.div>
                 ))}
               </div>

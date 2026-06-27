@@ -62,7 +62,7 @@ const CTA = () => {
           >
             <motion.h2
               variants={fadeUp}
-              className="px-2 w-2xs md:w-lg font-brand leading-tight mb-3 font-extrabold text-4xl text-center"
+              className="px-2 w-xs md:w-md font-brand leading-tight mb-3 font-extrabold text-4xl text-center"
             >
               Let's build something great together
             </motion.h2>
