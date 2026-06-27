@@ -38,7 +38,7 @@ const Project = () => {
         <div>
           {isLoading ? (
             <div className="flex justify-center mt-10">
-              <div class="w-12 h-12 border-4 border-dashed border-gray-200 border-t-orange-400 rounded-full animate-spin [animation-duration:1.5s]"></div>
+              <div className="w-12 h-12 border-4 border-dashed border-gray-200 border-t-orange-400 rounded-full animate-spin [animation-duration:1.5s]"></div>
             </div>
           ) : (
             <>
@@ -48,16 +48,15 @@ const Project = () => {
                     <Oneproject project={project} />
                   </motion.div>
                 ))}
-
-                <motion.div variants={item} className="flex justify-center">
+              </div>
+               <motion.div variants={item} className="mt-7 flex justify-center">
                   <NavLink
                     to="/projectpage"
-                    className="flex max-w-max px-3 py-1 rounded-md border justify-center items-center"
+                    className="flex max-w-max px-3 py-1 border rounded-md justify-center items-center"
                   >
-                    View all projects <ArrowRight className="size-4" />
+                    View all projects <ArrowRight className="size-4"/>
                   </NavLink>
                 </motion.div>
-              </div>
             </>
           )}
         </div>
