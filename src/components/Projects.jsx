@@ -1,10 +1,9 @@
 import Oneproject from "./Oneproject";
 import { useProject } from "../context/ProjectContext";
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 
-const Project = () => {
+
+const Projects = () => {
   const { projects } = useProject();
 
   const container = {
@@ -36,24 +35,15 @@ const Project = () => {
         </motion.div>
 
         <div className="mt-10 grid md:grid-cols-2 gap-10 items-stretch">
-          {projects.slice(0, 2).map((project, index) => (
+          {projects.map((project, index) => (
             <motion.div key={index} variants={item}>
               <Oneproject project={project} />
             </motion.div>
           ))}
         </div>
-
-        <motion.div variants={item} className="flex justify-center">
-          <NavLink
-            to="/projects"
-            className="flex w-40 p-1.5 rounded-xl border mt-7 justify-center"
-          >
-            View all projects <ArrowRight />
-          </NavLink>
-        </motion.div>
       </div>
     </motion.section>
   );
 };
 
-export default Project;
+export default Projects;
