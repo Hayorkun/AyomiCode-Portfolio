@@ -75,7 +75,7 @@ const AboutMe = () => {
         <div className="my-max-width w-full md:flex justify-between gap-5">
 
           <motion.div
-            className="w-full md:w-[62.5%]"
+            className="w-full md:w-[62.5%] flex flex-col gap-2"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -114,7 +114,7 @@ const AboutMe = () => {
 
             <motion.div
               variants={fadeUp}
-              className="flex justify-center md:justify-start gap-4"
+              className="flex justify-center md:justify-start gap-4 mt-3"
             >
               {[
                 {

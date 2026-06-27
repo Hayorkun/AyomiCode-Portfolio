@@ -39,7 +39,7 @@ const CTA = () => {
     <div className="h-full px-5 py-10 md:py-15 flex justify-center">
       <div className="my-max-width w-full">
         <motion.div
-          className="w-full rounded-tl-4xl rounded-br-3xl bg-orange-400 p-10 flex flex-col justify-center items-center overflow-hidden relative"
+          className="w-full rounded-tl-4xl rounded-br-3xl bg-orange-400 p-10 flex flex-col items-center overflow-hidden relative"
           variants={cardVariants}
           initial="hidden"
           whileInView="visible"
@@ -94,13 +94,14 @@ const CTA = () => {
                 },
               ].map((btn, i) => (
                 <motion.div
+                className="mb-2"
                   key={btn.to}
                   custom={i}
                   variants={buttonVariants}
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.96 }}
                 >
-                  <NavLink to={btn.to} className={btn.className}>
+                  <NavLink  to={btn.to} className={btn.className}>
                     {btn.label}
                   </NavLink>
                 </motion.div>

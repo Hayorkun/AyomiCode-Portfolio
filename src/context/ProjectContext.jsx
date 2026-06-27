@@ -1,4 +1,3 @@
-import React from "react";
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 
@@ -9,10 +8,17 @@ export const ProjectProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    
     const fetchProjects = async () => {
       const URL = import.meta.env.VITE_JSONBIN_URL;
       const KEY = import.meta.env.VITE_JSONBIN_MASTER_KEY;
+
+      if (!URL || !KEY) {
+        console.error("Missing JSONBin environment variables.");
+        setIsLoading(false);
+        return;
+      }
+
+      setIsLoading(true);
 
       try {
         const response = await axios.get(URL, {
@@ -23,10 +29,11 @@ export const ProjectProvider = ({ children }) => {
 
         const data = response.data.record.projects;
         setProjects(data);
-
       } catch (error) {
         console.error("Error fetching data", error.response?.status);
         console.error("Error message", error.response?.data);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -34,7 +41,7 @@ export const ProjectProvider = ({ children }) => {
   }, []);
 
   return (
-    <ProjectContext.Provider value={{ projects }}>
+    <ProjectContext.Provider value={{ projects, isLoading }}>
       {children}
     </ProjectContext.Provider>
   );

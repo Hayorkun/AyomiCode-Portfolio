@@ -41,10 +41,10 @@ const Hero = () => {
       </motion.p>
 
       <motion.div variants={item} className="flex items-center justify-center gap-5">
-        <NavLink to="/project" className="border border-orange-400/50 px-4 py-2 rounded-full text-sm hover:bg-orange-400/70 transition">
+        <NavLink to="/projectpage" className="border border-orange-400/50 px-4 py-2 rounded-full text-sm hover:bg-orange-400/70 transition">
           View my work
         </NavLink>
-        <NavLink to="/project" className="border border-orange-400/50 px-4 py-2 rounded-full text-sm hover:bg-orange-400/70 transition">
+        <NavLink to="" className="border border-orange-400/50 px-4 py-2 rounded-full text-sm hover:bg-orange-400/70 transition">
           Download CV
         </NavLink>
       </motion.div>

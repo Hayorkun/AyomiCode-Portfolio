@@ -2,9 +2,8 @@ import Oneproject from "./Oneproject";
 import { useProject } from "../context/ProjectContext";
 import { motion } from "framer-motion";
 
-
 const Projects = () => {
-  const { projects } = useProject();
+  const { projects, isLoading } = useProject();
 
   const container = {
     hidden: {},
@@ -15,6 +14,14 @@ const Projects = () => {
     hidden: { opacity: 0, x: 20 },
     show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
   };
+
+  if (isLoading) {
+    return (
+      <div className="text-center py-10 text-orange-500">
+        Loading projects...
+      </div>
+    );
+  }
 
   return (
     <motion.section
