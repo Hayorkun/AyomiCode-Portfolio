@@ -45,7 +45,7 @@ const Project = () => {
 
         <motion.div variants={item} className="flex justify-center">
           <NavLink
-            to="/projects"
+            to="/projectpage"
             className="flex w-40 p-1.5 rounded-xl border mt-7 justify-center"
           >
             View all projects <ArrowRight />

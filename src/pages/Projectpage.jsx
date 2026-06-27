@@ -1,13 +1,13 @@
 import Footer from "../components/Footer";
-import Projects from "../components/Project";
+import Projects from "../components/Projects"
 import CTA from "../components/CTA";
 
 function ProjectPage() {
   return (
     <>
       <Projects />
-      <CTA />
-      <Footer />
+      <CTA/>
+      <Footer/>
     </>
   );
 }
