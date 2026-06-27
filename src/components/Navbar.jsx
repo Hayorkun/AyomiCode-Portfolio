@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Menu } from "lucide-react";
 import "../css/custom-css.css"
 
@@ -36,7 +36,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink style={navLinkStyles} to="/project">
+                <NavLink style={navLinkStyles} to="/projectpage">
                   Project
                 </NavLink>
               </li>
