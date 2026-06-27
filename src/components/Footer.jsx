@@ -66,7 +66,7 @@ const projects = [
 const connects = [
   { href: "https://github.com/Hayorkun", label: "GitHub" },
   { href: "https://www.linkedin.com/in/ayomide-yerokun-1a0394388", label: "LinkedIn" },
-  { href: "https://x.com/bug_huntayo?s=21", label: "X" },
+  { href: "https://x.com/ayomicode?s=21", label: "X" },
 ];
 
 // ── component ────────────────────────────────────────────────────────────────
