@@ -1,6 +1,5 @@
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import { ArrowRight, RefreshCcw } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
