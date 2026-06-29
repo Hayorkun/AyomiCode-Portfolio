@@ -104,7 +104,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   style={navLinkStyles}
-                  to="/project"
+                  to="/projectpage"
                   onClick={() => setSidebarOpen(false)}
                 >
                   Project
